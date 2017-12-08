@@ -36,7 +36,7 @@ public class WebSocket implements jdk.incubator.http.WebSocket.Listener {
     private Consumer<Event> onopen;
     private Consumer<Event> onerror;
     private Consumer<Event> onclose;
-    private String extensions = "";
+    private String extensions = ""; // TODO: not implemented yet
     private String protocol = "";
 
     // messaging
@@ -128,7 +128,7 @@ public class WebSocket implements jdk.incubator.http.WebSocket.Listener {
         readyState = CLOSING;
     }
 
-    // Only text send is supported now.
+    // Only sending text is supported at the moment
     // TODO: consider adding support for the following overloads (i.e., binary data):
     // void send(Blob data);
     // void send(ArrayBuffer data);

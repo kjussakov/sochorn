@@ -1,4 +1,4 @@
-// Required polyfills. Only the bare minimum.
+// Polyfills for some basics - only the bare minimum.
 // Look at https://github.com/shendepu/nashorn-polyfill for more complete list of Nashorn polyfills
 
 var global = this;
@@ -12,5 +12,8 @@ console.log = print;
 console.error = print;
 console.trace = print;
 
-// Polyfill for the missing WebSocket API in Nashorn
+// The WebSocket Nashorn polyfill
 var WebSocket = Java.type('org.kjussakov.sochorn.WebSocket');
+
+// This is only needed for the Echo test to signal that the test is complete
+var Echo = Java.type('org.kjussakov.sochorn.samples.Echo');

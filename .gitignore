@@ -1,4 +1,11 @@
-mods
-
+# Compiled Java classes
 *.class
 *.jar
+
+# Compiled Java 9 modules
+mods
+
+# IntelliJ IDEA specific
+.idea
+out
+*.iml
